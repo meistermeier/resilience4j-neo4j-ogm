@@ -1,0 +1,7 @@
+== Resilience4j in Neo4j-OGM
+
+This tiny repository shows a practical way to combine https://github.com/neo4j/neo4j-ogm[Neo4j-OGM] and https://github.com/resilience4j/resilience4j[Resilience4j].
+It is based on the https://resilience4j.readme.io/docs/retry[resilience4j-retry] functionality and reflects the behaviour of the Neo4j Java driver when it encounters situations that allow a retry of the operation.
+The use of the transaction functions in the driver is currently not possible in Neo4j-OGM because it has its own transaction manager and relies on the driver's un-managed transactions.
+
+Please note if you are using the driver directly you should always aim to use the transaction functions.
